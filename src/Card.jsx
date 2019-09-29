@@ -37,17 +37,39 @@ class Card extends Component {
     let key = 0;
     return rating.map(starColour => {
       return (
-        <div className="star">
+        <div className="star" key={key++}>
           <Star className={starColour} key={key++} />
         </div>
       );
     });
   };
 
+  buttonText = () => {
+    return this.state.inCart ? "Remove from Cart" : "Add to cart";
+  };
+
+  changeCartStatus = event => {
+    event.preventDefault();
+    let currentCartStatus = this.state.inCart;
+    this.setState({ inCart: !currentCartStatus });
+  };
+
   render = () => {
     return (
       <div className="card">
+        <div
+          className={
+            this.state.inCart ? "cartMarker visible" : "cartMarker invisible"
+          }
+        >
+          In Cart
+        </div>
         <div className="imageContainer">
+          <div className="cartWrapper">
+            <button onClick={this.changeCartStatus} className="cartButton">
+              {this.buttonText()}
+            </button>
+          </div>
           <img
             src={this.state.img}
             className="itemImage"

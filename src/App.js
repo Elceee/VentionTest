@@ -44,7 +44,7 @@ class App extends Component {
   };
 
   render = () => {
-    return <div class="main container">{this.renderItemsAsCards()}</div>;
+    return <div className="main container">{this.renderItemsAsCards()}</div>;
   };
 }
 

@@ -44,6 +44,7 @@ body {
   border-radius: 5px;
   height: 460px;
   width: 370px;
+  position: relative;
 }
 
 .main {
@@ -77,10 +78,69 @@ body {
   font-weight: 700;
 }
 
-.price {
+.imageContainer {
+  position: relative;
 }
 
 .star {
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.cartWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: 2;
+}
+
+.cartButton {
+  position: absolute;
+  width: 165px;
+  height: 35px;
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  border-style: none;
+  background-color: #42e695;
+  color: white;
+  opacity: 1;
+}
+
+.card:hover .cartWrapper {
+  visibility: visible;
+}
+
+.card:hover .itemImage {
+  opacity: 0.5;
+}
+
+.cartMarker {
+  color: white;
+  background-color: #ff6347;
+  font-size: 9pt;
+  height: 66px;
+  width: 66px;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }

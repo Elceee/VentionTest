@@ -20,3 +20,67 @@
 .App-link {
   color: #09d3ac;
 }
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.black {
+  fill: black;
+}
+
+.gray {
+  fill: gray;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: 1px black;
+  width: 300px;
+  box-shadow: 0 0 5px lightgray;
+  border-radius: 5px;
+  height: 460px;
+  width: 370px;
+}
+
+.main {
+  margin-left: 10px;
+  margin-top: 200px;
+  width: 1200px;
+  height: 480px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemImage {
+  width: 350px;
+}
+
+.info {
+  border-top: 1px solid lightgray;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.price {
+}
+
+.star {
+  padding-left: 2px;
+  padding-right: 2px;
+}

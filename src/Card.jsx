@@ -3,6 +3,7 @@ import { ReactComponent as Star } from "./images/star.svg";
 import blueFlower from "./images/blue-flower.png";
 import orangeFlower from "./images/orange-flower.png";
 import pinkFlower from "./images/pink-flower.png";
+import "./Card.css";
 
 class Card extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Card extends Component {
       this.setState({ img: blueFlower });
     } else if (this.props.imgPath === "orangeFlower") {
       this.setState({ img: orangeFlower });
-    } else if (this.props.imgPath) {
+    } else if (this.props.imgPath === "pinkFlower") {
       this.setState({ img: pinkFlower });
     }
   };
@@ -45,7 +46,7 @@ class Card extends Component {
   };
 
   buttonText = () => {
-    return this.state.inCart ? "Remove from Cart" : "Add to cart";
+    return this.state.inCart ? "Remove from cart" : "Add to cart";
   };
 
   changeCartStatus = event => {
